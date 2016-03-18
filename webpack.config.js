@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const ENV = process.env.NODE_ENV;
 const isTest = ENV === 'test';
@@ -22,6 +23,10 @@ const config = {
   },
   devtool: 'cheap-module-eval-source-map',
   debug: isDev,
+  devServer: {
+    contentBase: './dist',
+    // 'content-base': './dist'
+  },
   // externals,
   resolve: {
     cache: !isTest,
@@ -66,7 +71,13 @@ const config = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       inject: true
-    })
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: 'src/**/*.html',
+        to: 'dist'
+      }
+    ]),
   ],
   postcss: [
     autoprefixer({
