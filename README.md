@@ -1,12 +1,13 @@
-## angular2-webpack-starter-minimum
+## Angular 2 + Webpack Mininum
 
-### Install & start
+## Install
 
-```
-$ git clone https://github.com/shumpei/angular2-webpack-starter-minimum
-$ cd angular2-webpack-starter-minimum
-$ npm install
-$ npm start
-```
+> `npm install`
 
-And visit [http://localhost:8080/webpack-dev-server/](http://localhost:8080/webpack-dev-server/), you will see the simple output.
+## Start
+
+> `npm start`
+
+## Browse
+
+- http://localhost:8080/webpack-dev-server

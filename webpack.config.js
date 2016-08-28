@@ -24,8 +24,7 @@ const config = {
   devtool: 'cheap-module-eval-source-map',
   debug: isDev,
   devServer: {
-    contentBase: './dist',
-    // 'content-base': './dist'
+    contentBase: './dist'
   },
   // externals,
   resolve: {

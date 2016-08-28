@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "moduleResolution": "node",
     "sourceMap": true
   },
   "exclude": [
@@ -11,12 +12,9 @@
     "typings/main.d.ts",
     "typings/main"
   ],
+  "compilerOnSavel": true,
   "filesGlob": [
-    "./src/**/*.ts",
-    "./test/**/*.ts",
-    "!./node_modules/**/*.ts",
-    "src/custom-typings.d.ts",
-    "typings/browser.d.ts"
+    "./src/**/*.ts"
   ],
   "awesomeTypescriptLoaderOptions": {
     "useCache": true,
